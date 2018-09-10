@@ -1,0 +1,6 @@
+query SkillsQuery($example:String!){
+  skills(where: {name: {_like: $example}}){
+    id
+    name
+  }
+}
