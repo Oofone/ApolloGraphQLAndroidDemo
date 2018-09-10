@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.apollographql.android'
 
+// The Gradle plugin was added in the previous line.
+
 android {
     compileSdkVersion 27
     defaultConfig {

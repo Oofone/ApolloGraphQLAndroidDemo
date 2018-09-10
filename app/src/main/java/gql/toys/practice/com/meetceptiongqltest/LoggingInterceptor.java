@@ -10,6 +10,13 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/**
+ *
+ * This interceptor is never used. It was meant for different uses.
+ * Please ignore this file.
+ *
+ */
+
 public class LoggingInterceptor implements Interceptor {
     @Override public Response intercept(Interceptor.Chain chain) throws IOException {
         Request request = chain.request();
