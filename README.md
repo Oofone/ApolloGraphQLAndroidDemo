@@ -7,6 +7,7 @@ A lot of examples/getting started gists exist out there. But here's a simple and
 
 ### Setting up Dependancies.
 </br>
+
 To the **project** build.gradle file add:
 ```
 classpath 'com.apollographql.apollo:apollo-gradle-plugin:<VERS>'
@@ -33,6 +34,7 @@ repositories {
 ```
 
 To the **app** build.gradle file add:
+
 ```
 apply plugin: 'com.apollographql.android'
 ```
