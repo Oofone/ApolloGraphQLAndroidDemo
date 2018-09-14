@@ -33,7 +33,13 @@ repositories {
   }
 ```
 
-To the **app** build.gradle file add:
+If you want to use features like *caching* ensure that you add this runtime dependancy to your **app** build.gradle file as well:
+
+```
+implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha2'
+```
+
+Finally to the **app** build.gradle file add:
 
 ```
 apply plugin: 'com.apollographql.android'
@@ -41,12 +47,6 @@ apply plugin: 'com.apollographql.android'
 
 Ensure that it's after `apply plugin: 'com.android.application'
 `, which would generally be the first line.
-
-If you want to use features like *caching* ensure that you add this runtime dependancy to your **app** build.gradle file as well:
-
-```
-implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha2'
-```
 
 ### Setting Up Queries
 
