@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,8 +19,6 @@ import com.apollographql.apollo.exception.ApolloException;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.OkHttpClient;
@@ -55,9 +51,8 @@ public class MainActivity extends AppCompatActivity {
      * It uses an OkHttpClient which we create and assign to the Client object.
      * We also set the endpoint URL here.
      *
-     * @return ApolloClient
+     * @return ApolloClient: An ApolloClient object.
      */
-
     private ApolloClient initClient(){
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .build();
@@ -86,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param example: The query String
      */
-    private void skiller(String example){
+    private void getSkill(String example){
 
         // We'll set the querystring as a parameter to the query.
         SkillsQuery skillsQuery = SkillsQuery.builder()
@@ -162,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 Log.d("KeyUp", "Key Up event detected. Calling API.");
-                skiller(s.toString() + "%");
+                getSkill(s.toString() + "%");
             }
 
             @Override
